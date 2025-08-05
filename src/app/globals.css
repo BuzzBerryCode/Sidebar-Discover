@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:600,500,400,700");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --neutral-10: rgba(255, 255, 255, 1);
+  --neutral-new200: rgba(191, 204, 218, 1);
+  --neutral-new600: rgba(78, 101, 127, 1);
+  --regular-shadow-small: 0px 2px 4px 0px rgba(27, 28, 29, 0.04);
+  
+  /* Original custom colors */
+  --abu-abu: #f8f9fa;
+  --agak-putih: #ffffff;
+  --basewhite: #ffffff;
+  --graysblack: #000000;
+  --neutral-100: #f8f9fa;
+  --neutral-new100: #f8f9fa;
+  --neutral-new900: #111827;
+  
+  /* Page Background & Layout */
+  --page-bg: #000000;
+  --section-bg: #0f1419;
+  --card-bg: #ffffff;
+  --card-bg-dark: #1f2937;
+  
+  /* Text Colors - Primary */
+  --text-heading-main: #f8f9fa;
+  --text-primary: #06152b;
+  --text-primary-alt: #080d1c;
+  --text-secondary: #71737c;
+  --text-muted: #999999;
+  --text-heading: #111827;
+  --text-label: #374151;
+  --text-button: #6b7280;
+  --text-dark: #06152b;
+  --text-medium: #71737c;
+  --text-light: #999999;
+  
+  /* Brand Colors */
+  --brand-blue: #557EDD;
+  --brand-purple: #6C40E4;
+  --brand-blue-hover: #4A6BC8;
+  --brand-purple-hover: #5A36C7;
+  
+  /* Gradient Colors */
+  --gradient-red: #FC4C4B;
+  --gradient-pink: #CD45BA;
+  --gradient-purple: #6E57FF;
+  
+  /* Border Colors - Light Mode */
+  --border-light: #dbe2eb;
+  --border-lighter: #f1f4f9;
+  --border-divider: #e1e5e9;
+  --border-section: #f3f4f6;
+  --border-dropdown: #e5e7eb;
+  --border-selected: #94c4fc;
+  --border-pagination: #2463eb;
+  --border-checkbox: #D9E1E7;
+  --border-list-selected: #94c4fc;
+  --border-gray: #dbe2eb;
+  --border-light-gray: #f1f4f9;
+  --input-border: #d1d5db;
+  --action-border: #E5E7EB;
+  
+  /* Background Colors - Interactive */
+  --bg-card: #F9FAFB;
+  --bg-selected: #f1f6fe;
+  --bg-hover: #f9fafb;
+  --bg-hover-alt: #F0F0F0;
+  --bg-input: #f9fafb;
+  --bg-toggle-active: #f1f4f9;
+  --bg-light: #f1f4f9;
+  --bg-white: #ffffff;
+  --hover-bg: #f9fafb;
+  --selected-bg: #f1f6fe;
+  
+  /* Profile & Special Backgrounds */
+  --bg-profile: #384455;
+  --profile-bg: #384455;
+  --ai-toggle-start: #E7CBFD;
+  --ai-toggle-end: #E0DEEA;
+  
+  /* Status & Feedback Colors */
+  --success-green: #1ad598;
+  --error-red: #ea3a3d;
+  
+  /* Focus & Interactive States */
+  --focus-ring: #3b82f6;
+  --donut-stroke: #E5E7EB;
+  
+  /* Component-Specific Colors - Light Mode */
+  --filter-button-active-bg: #3b82f6;
+  --filter-button-active-border: #1d4ed8;
+  --filter-button-inactive-bg: #ffffff;
+  --filter-button-inactive-border: #dbe2eb;
+  --filter-dropdown-bg: #ffffff;
+  --filter-dropdown-border: #e5e7eb;
+  
+  --card-border-selected: #94c4fc;
+  --card-border-unselected: #F1F4F9;
+  --card-bg-selected: #f1f6fe;
+  --card-bg-unselected: #ffffff;
+  --metrics-bg: #F9FAFB;
+  --buzz-score-bg: #F1F4F9;
+  
+  --toggle-active-bg-start: #E7CBFD;
+  --toggle-active-bg-end: #E0DEEA;
+  --toggle-inactive-bg: #ffffff;
+  --toggle-border: #dbe2eb;
+  
+  --badge-primary-bg: #f0f9ff;
+  --badge-primary-border: #dbe2eb;
+  --badge-secondary-bg: #f0fdf4;
+  --badge-secondary-border: #bbf7d0;
+  --badge-text: #111827;
+  
+  /* Match Score Colors - Light Mode */
+  --match-green: #22c55e;
+  --match-green-bg: #dcfce7;
+  --match-yellow: #eab308;
+  --match-yellow-bg: #fef3c7;
+  --match-orange: #f97316;
+  --match-orange-bg: #fed7aa;
+  --match-red: #ef4444;
+  --match-red-bg: #fecaca;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 220 13% 18%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+    
+    /* Dark theme custom colors */
+    --abu-abu: #1f2937;
+    --agak-putih: #111827;
+    --basewhite: #000000;
+    --graysblack: #ffffff;
+    --neutral-100: #1f2937;
+    --neutral-new100: #1f2937;
+    --neutral-new600: #9ca3af;
+    --neutral-new900: #f9fafb;
+    
+    /* Page Background & Layout - Dark */
+    --page-bg: #000000;
+    --section-bg: #0f1419;
+    --card-bg: #1f2937;
+    --card-bg-dark: #1f2937;
+    
+    /* Text Colors - Dark Mode */
+    --text-heading-main: #f9fafb;
+    --text-primary: #f9fafb;
+    --text-primary-alt: #f9fafb;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --text-heading: #f9fafb;
+    --text-label: #d1d5db;
+    --text-button: #9ca3af;
+    --text-dark: #f9fafb;
+    --text-medium: #9ca3af;
+    --text-light: #6b7280;
+    
+    /* Brand Colors - Same in dark mode */
+    --brand-blue: #557EDD;
+    --brand-purple: #6C40E4;
+    --brand-blue-hover: #4A6BC8;
+    --brand-purple-hover: #5A36C7;
+    
+    /* Gradient Colors - Same in dark mode */
+    --gradient-red: #FC4C4B;
+    --gradient-pink: #CD45BA;
+    --gradient-purple: #6E57FF;
+    
+    /* Border Colors - Dark Mode */
+    --border-light: #374151;
+    --border-lighter: #1f2937;
+    --border-divider: #374151;
+    --border-section: #374151;
+    --border-dropdown: #4b5563;
+    --border-selected: #3b82f6;
+    --border-pagination: #2463eb;
+    --border-checkbox: #4b5563;
+    --border-list-selected: #3b82f6;
+    --border-gray: #374151;
+    --border-light-gray: #1f2937;
+    --input-border: #4b5563;
+    --action-border: #4b5563;
+    
+    /* Background Colors - Dark Mode */
+    --bg-card: #1f2937;
+    --bg-selected: #1e3a8a;
+    --bg-hover: #1f2937;
+    --bg-hover-alt: #1f2937;
+    --bg-input: #1f2937;
+    --bg-toggle-active: #374151;
+    --bg-light: #1f2937;
+    --bg-white: #111827;
+    --hover-bg: #1f2937;
+    --selected-bg: #1e3a8a;
+    
+    /* Profile & Special Backgrounds - Dark */
+    --bg-profile: #384455;
+    --profile-bg: #384455;
+    --ai-toggle-start: #7c3aed;
+    --ai-toggle-end: #6366f1;
+    
+    /* Status & Feedback Colors - Same in dark mode */
+    --success-green: #1ad598;
+    --error-red: #ea3a3d;
+    
+    /* Focus & Interactive States - Dark */
+    --focus-ring: #3b82f6;
+    --donut-stroke: #4b5563;
+    
+    /* Component-Specific Colors - Dark Mode */
+    --filter-button-active-bg: #3b82f6;
+    --filter-button-active-border: #1d4ed8;
+    --filter-button-inactive-bg: #1f2937;
+    --filter-button-inactive-border: #374151;
+    --filter-dropdown-bg: #1f2937;
+    --filter-dropdown-border: #4b5563;
+    
+    --card-border-selected: #3b82f6;
+    --card-border-unselected: #374151;
+    --card-bg-selected: #1e3a8a;
+    --card-bg-unselected: #1f2937;
+    --metrics-bg: #1f2937;
+    --buzz-score-bg: #374151;
+    
+    --toggle-active-bg-start: #7c3aed;
+    --toggle-active-bg-end: #6366f1;
+    --toggle-inactive-bg: #1f2937;
+    --toggle-border: #374151;
+    
+    --badge-primary-bg: #1e3a8a;
+    --badge-primary-border: #3b82f6;
+    --badge-secondary-bg: #14532d;
+    --badge-secondary-border: #4ade80;
+    --badge-text: #f9fafb;
+    
+    /* Match Score Colors - Dark Mode */
+    --match-green: #4ade80;
+    --match-green-bg: #14532d;
+    --match-yellow: #facc15;
+    --match-yellow-bg: #713f12;
+    --match-orange: #fb923c;
+    --match-orange-bg: #9a3412;
+    --match-red: #f87171;
+    --match-red-bg: #7f1d1d;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: black;
+  }
+}
