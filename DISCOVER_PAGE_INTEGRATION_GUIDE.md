@@ -21,11 +21,11 @@ Ensure these dependencies are installed in the main dashboard's `package.json`:
 Create/update `.env` file with:
 ```env
 # Supabase Configuration
-NEXT_PUBLIC_SUPABASE_URL=https://unovwhgnwenxbyvpevcz.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVub3Z3aGdud2VueGJ5dnBldmN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIxMzY1NDAsImV4cCI6MjA2NzcxMjU0MH0.UgHG08bBKdJDo0mJNX61z-ihd3WPScaxNX_zmNDIHSs
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url_here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
 
 # Gemini API Configuration
-NEXT_PUBLIC_GEMINI_API_KEY=AIzaSyBYRd9lJTe1mRgJLhpbp39butQbXDgBBMw
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
 
 # Optional: If you need server-side environment variables (for edge functions)
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
